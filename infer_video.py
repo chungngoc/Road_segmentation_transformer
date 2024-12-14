@@ -85,7 +85,7 @@ while cap.isOpened:
             outputs,
             f"{fps:.1f} FPS",
             (15,35),
-            ontFace=cv.FONT_HERSHEY_SIMPLEX,
+            fontFace=cv.FONT_HERSHEY_SIMPLEX,
             fontScale=1,
             color=(0, 0, 255),
             thickness=2,

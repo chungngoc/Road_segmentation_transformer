@@ -126,7 +126,8 @@ if __name__ == '__main__':
             ALL_CLASSES,
             LABEL_COLORS_LIST,
             epoch=epoch,
-            save_dir=out_dir_val_preds
+            save_dir=out_dir_val_preds,
+            device=device
         )
 
         train_loss.append(train_epoch_loss)
@@ -172,4 +173,4 @@ if __name__ == '__main__':
         )
         # Save final model
         save_model(model, out_dir, name='final_model')
-        print("Complet !!!!!!")
+    print("Complet !!!!!!")

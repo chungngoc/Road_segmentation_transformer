@@ -77,7 +77,8 @@ def draw_translucent_seg_maps(data, output, epoch, i, val_seg_dir, label_colors_
     rgb = np.stack([red_map, green_map, blue_map], axis=2)
     rgb = np.array(rgb, dtype=np.float32)
     # convert color to BGR format for OpenCv
-    rgb = cv.cvtColor(rgb, cv.COLOR_RGB2BGR) * 255.0
+    rgb = cv.cvtColor(rgb, cv.COLOR_RGB2BGR)
+    image = cv.cvtColor(image, cv.COLOR_RGB2BGR) * 255.0
     cv.addWeighted(image, alpha, rgb, beta,gamma, image)
     cv.imwrite(f"{val_seg_dir}/e{epoch}_b{i}.jpg", image)
 
